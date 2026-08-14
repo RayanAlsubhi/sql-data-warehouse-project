@@ -4,7 +4,7 @@ Script: Create Silver Layer Tables
 Purpose:
     - Drop existing Silver layer tables if they already exist.
     - Recreate the Silver layer tables with the required structure.
-    - Add a DWH creation timestamp to track when each record is loaded.
+    - Add a DWH creation timestamp to track when each record is loaded added by a Data Eng.
 
 Notes:
     - This script is intended to be executed during the database initialization
