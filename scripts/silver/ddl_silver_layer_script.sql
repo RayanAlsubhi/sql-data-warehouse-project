@@ -59,15 +59,18 @@ END;
 -- Create the Silver product table.
 -- This table will contain cleaned and transformed product information
 -- from the Bronze layer.
-CREATE TABLE silver.crm_prd_info
-(
-    prd_id              INT,
-    prd_key             NVARCHAR(50),
-    prd_nm              NVARCHAR(100),
-    prd_cost            INT,
-    prd_line            NVARCHAR(50),
-    prd_start_dt        DATETIME,
-    prd_end_dt          DATETIME,
+CREATE TABLE silver.crm_prd_info(
+	prd_id INT,
+	cat_id NVARCHAR(50),
+	prd_key NVARCHAR(50),
+	prd_nm NVARCHAR(100),
+	prd_cost INT,
+	prd_line NVARCHAR(50),
+	prd_start_dt DATE ,
+	prd_end_dt DATE,
+	dwh_create_date DATETIME2 DEFAULT GETDATE()
+
+
 
     -- Automatically records when the record is loaded into the DWH.
     dwh_create_date     DATETIME2 DEFAULT GETDATE()
